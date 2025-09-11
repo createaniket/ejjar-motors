@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const User = require("./src/routes/user");
 const Admin = require("./src/routes/admin");
+const Car = require("./src/routes/car");
 
 
 
@@ -51,6 +52,7 @@ db.on("disconnected", () => {
 app.use('/api/user', User);
 
 app.use('/api/admin', Admin);
+app.use('/api/car', Car);
 
 
 
