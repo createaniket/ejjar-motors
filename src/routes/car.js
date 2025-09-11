@@ -6,9 +6,9 @@ const {
   updateCar,
   deleteCar,
   markAsSold,
-} = require("../controllers/carController.js");
+} = require("../controller/carcontoller.js");
 
-const AdAuth = require("../middleware/AdAuth.js");
+const AdAuth = require("../middlewares/AdAuth.js")
 
 const router = express.Router();
 
@@ -22,4 +22,4 @@ router.put("/:id", AdAuth, updateCar); // update car (owner/admin)
 router.delete("/:id", AdAuth, deleteCar); // delete car (owner/admin)
 router.put("/:id/sold", AdAuth, markAsSold); // mark car as sold
 
-export default router;
+module.exports = router;
