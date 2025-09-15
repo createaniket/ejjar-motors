@@ -71,7 +71,7 @@ const carSchema = new mongoose.Schema(
     featured: { type: Boolean, default: false }, // promoted listing
 
     // User References
-    seller: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+
     buyer: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, // once sold
     isDealer: { type: Boolean, default: false },
 

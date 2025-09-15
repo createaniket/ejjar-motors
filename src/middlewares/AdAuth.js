@@ -10,6 +10,7 @@ const AdAuth = async (req, res, next) => {
         _id: decoded._id,
         "tokens.token": token,
       });
+      // console.log("the admin", admin)
       if (!admin) {
         throw new Error();
       } else {

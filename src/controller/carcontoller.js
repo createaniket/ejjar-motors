@@ -3,7 +3,7 @@ const Car = require("../models/Car");
 // Add a new car
 exports.addCar = async (req, res) => {
   try {
-    const carData = { ...req.body, seller: req.user._id };
+    const carData = { ...req.body };
     const car = await Car.create(carData);
     res.status(201).json({ success: true, car });
   } catch (err) {
