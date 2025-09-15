@@ -12,7 +12,7 @@ router.post("/signup", async (req, res) => {
 
     const saveduser = await user.save();
 
-    res.status(201).json({ token: token, user: saveduser, wallet: Wallet });
+    res.status(201).json({ token: token, user: saveduser});
   } catch (error) {
     res.status(500).send(error);
     console.log(error);
