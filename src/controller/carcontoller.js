@@ -38,9 +38,7 @@ exports.getCars = async (req, res) => {
 // Get single car by ID
 exports.getCarById = async (req, res) => {
   try {
-    const car = await Car.findById(req.params.id)
-      .populate("seller", "name email phone")
-      .populate("buyer", "name email phone");
+    const car = await Car.findById(req.params.id);
 
     if (!car) {
       return res.status(404).json({ success: false, message: "Car not found" });
