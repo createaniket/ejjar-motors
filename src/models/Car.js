@@ -56,7 +56,8 @@ const carSchema = new mongoose.Schema(
     address: { type: String },
 
     // Pricing
-    price: { type: Number, required: true },
+    usdprice: { type: Number, required: true },
+    sspprice: { type: Number, required: true },
     negotiable: { type: Boolean, default: false },
     expectedPrice: { type: Number }, // seller expected price
     marketValue: { type: Number }, // estimated by platform

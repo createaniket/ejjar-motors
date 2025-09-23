@@ -62,7 +62,7 @@ exports.updateCar = async (req, res) => {
       return res.status(403).json({ success: false, message: "Unauthorized" });
     }
 
-    car = await Car.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    car = await Car.findByIdAndUpdate(req.params.id, req.body);
     res.status(200).json({ success: true, car });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
